@@ -1,0 +1,52 @@
+/* src/App.css */
+* {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Use a common sans-serif font */
+  line-height: 1.6; /* Improves readability */
+  background-color: var(
+    --background-color
+  ); /* A light, neutral background color */
+  color: #333; /* Default text color */
+  width: 100%;
+}
+
+/* General container for the main content. This centers the content
+  and adds some padding. You can adjust the max-width as needed.
+*/
+.App {
+  max-width: 1400%;
+  margin: 0 auto;
+}
+
+/*
+  Styles for common elements to ensure consistency.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Georgia', serif; /* Use a more distinct font for headings */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #007bff; /* A standard blue for links */
+  text-decoration: none; /* Removes the underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Adds underline on hover for better user experience */
+}

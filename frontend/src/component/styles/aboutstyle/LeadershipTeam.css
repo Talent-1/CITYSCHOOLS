@@ -1,0 +1,25 @@
+.leadership-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.leaders-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.leader-card {
+  width: 250px;
+  text-align: center;
+}
+
+.leader-image-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 auto 15px;
+}

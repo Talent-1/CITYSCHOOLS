@@ -1,0 +1,20 @@
+.core-values-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.values-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

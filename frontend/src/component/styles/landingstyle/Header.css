@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #3cc453;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.login-button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+.header-toggle {
+  display: none; /* Hide the menu toggle by default */
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links on smaller screens */
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+  }
+
+  .header-toggle {
+    display: block; /* Show the menu toggle icon */
+  }
+}

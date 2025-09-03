@@ -1,0 +1,304 @@
+/* src/styles/AuthPage.css */
+
+.auth-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to start for better scrolling on smaller screens */
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in element's total width and height */
+}
+
+.auth-content-wrapper {
+    width: 100%;
+    max-width: 900px; /* Adjust max-width to accommodate the type selection */
+    margin: 20px auto; /* Center with some top/bottom margin */
+}
+
+/* Base card styling for all forms */
+.auth-card, .auth-selection-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem; /* Spacing between cards if multiple were visible (though not in this design) */
+}
+
+.auth-card h2, .auth-card h3, .auth-selection-card h2, .auth-selection-card h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.auth-description, .auth-sub-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Login Type Selection */
+.login-type-options {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.login-type-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1; /* Allow cards to grow and shrink */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 380px; /* Maximum width for larger screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-type-card:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+}
+
+.login-type-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.login-type-card h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.login-type-card p {
+    color: #777;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+.portal-button {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+}
+
+.portal-button:hover {
+    background-color: #0a58ca;
+}
+
+/* Form Groups */
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+    margin-bottom: 0; /* Remove bottom margin as gap handles spacing */
+}
+
+.form-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="tel"],
+.auth-form input[type="date"],
+.auth-form select {
+    width: 100%;
+    padding: 12px 12px 12px 45px; /* Adjust left padding for icon */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Include padding in element's total width */
+}
+
+/* For inputs that don't have an icon, remove extra left padding */
+.auth-form .form-group-inline input {
+    padding-left: 12px;
+}
+
+.auth-form input[type="date"] {
+    padding-right: 12px; /* For date picker, remove right padding if icon is not there */
+}
+
+.auth-form select {
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4s-3.7%208.7-3.7%2013.8v1.6c0%205%201.8%209.3%205.4%2012.9l118.8%20118.8c3.6%203.6%208%205.4%2013%205.4s9.4-1.8%2012.9-5.4l118.8-118.8c3.6-3.5%205.4-7.8%205.4-12.8V82.8c.1-5.1-1.7-9.4-5.3-13z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px;
+}
+
+.form-actions label {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.forgot-password-link, .auth-switch-link {
+    color: #0d6efd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.forgot-password-link:hover, .auth-switch-link:hover {
+    text-decoration: underline;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-button:hover {
+    background-color: #0a58ca;
+}
+
+.auth-switch-text {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.back-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c757d; /* Grey button for back action */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+.register-terms {
+    justify-content: flex-start; /* Align terms checkbox to the left */
+    font-size: 0.85rem;
+}
+
+.register-terms input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .login-type-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-type-card {
+        width: 100%;
+        max-width: 350px; /* Slightly narrower on small screens */
+    }
+
+    .form-group-inline {
+        flex-direction: column;
+        gap: 0; /* Remove gap when stacking */
+    }
+
+    .form-group-inline .form-group {
+        margin-bottom: 1.5rem; /* Re-add margin when stacked */
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card, .auth-selection-card {
+        padding: 1.5rem;
+    }
+
+    .auth-card h2, .auth-card h3, .auth-selection-card h2, .auth-selection-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .auth-tab {
+        font-size: 1rem;
+        padding: 1.2rem 0;
+    }
+
+    .auth-button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

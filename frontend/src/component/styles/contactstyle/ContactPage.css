@@ -1,0 +1,259 @@
+/* src/styles/ContactPage.css */
+.contact-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-hero {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--background-color);
+    margin-bottom: 2rem;
+}
+
+.contact-hero h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-content-grid {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-form-container,
+.contact-info-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-container h3,
+.contact-info-container h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-form-container p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form-container button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: var(--secondary-color);
+}
+
+.map-placeholder {
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.detail-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Key Contacts Section */
+.key-contacts-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.key-contacts-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.key-contacts-section p {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.contact-card h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-title {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin: 0.5rem 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Emergency and Social Section */
+.emergency-social-section {
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.emergency-contacts,
+.connect-with-us {
+    flex: 1;
+    min-width: 300px;
+}
+
+.emergency-contacts h2,
+.connect-with-us h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.emergency-hotline {
+    background-color: #f8d7da; /* Light red/warning color */
+    color: #721c24; /* Dark red */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 1.5rem;
+}
+
+.hotline-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.other-numbers h4 {
+    margin-bottom: 0.5rem;
+}
+
+.social-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.social-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.social-link-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-content-grid,
+    .emergency-social-section {
+        flex-direction: column;
+    }
+}

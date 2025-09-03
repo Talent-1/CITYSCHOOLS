@@ -1,0 +1,93 @@
+.tuition-fees-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.tuition-fees-section h2 {
+  font-size: 2.5rem;
+  color: #0d1a2f;
+  margin-bottom: 0.5rem;
+}
+
+.tuition-fees-section p {
+  color: #555;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.fees-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.fee-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.fee-card:hover {
+  transform: translateY(-10px);
+}
+
+.fee-card h3 {
+  font-size: 1.8rem;
+  color: #1a2a43;
+  margin-bottom: 1rem;
+}
+
+.price-tag {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.per-term {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.details-list {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item span {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.apply-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: var(--primary-color-dark);
+}

@@ -1,0 +1,132 @@
+/* src/styles/Navbar.css */
+
+/* --- General Navbar Styling --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- Logo and Brand Styling --- */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+}
+
+/* --- Navigation Links --- */
+.navbar-links {
+  display: flex;
+  gap: 20px; /* Reduced gap for more space */
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.navbar-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Active link styling for React Router's NavLink */
+.navbar-links a.active {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Special styling for the Login button */
+.navbar-links a.nav-button {
+  padding: 10px 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background: var(--secondary-color);
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: none;
+}
+
+.navbar-links a.nav-button:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
+}
+
+/* --- Mobile Menu Styling --- */
+.navbar-toggle {
+  display: none; /* Hidden by default on desktop */
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 15px; /* Further reduce gap on smaller desktop screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.4s ease-in-out;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .navbar-links.open {
+    transform: translateY(0);
+  }
+
+  .navbar-links a {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: none;
+  }
+
+  .navbar-links a.active {
+    border-bottom: none;
+    color: var(--secondary-color);
+  }
+
+  .navbar-links a.nav-button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

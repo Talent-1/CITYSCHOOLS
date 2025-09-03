@@ -1,0 +1,24 @@
+.mission-vision-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 40px;
+}
+
+.image-placeholder {
+  flex: 1;
+  height: 400px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.statement {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,33 @@
+.about-us-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.text-content {
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.about-image-placeholder {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+}
+
+.about-us h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}

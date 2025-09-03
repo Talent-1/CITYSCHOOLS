@@ -1,0 +1,278 @@
+/* src/styles/AcademicsPage.css */
+
+.academics-page-container {
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.academics-hero,
+.curriculum-section,
+.departments-section,
+.programs-section,
+.assessment-section,
+.support-section,
+.calendar-section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.academics-hero h2,
+.curriculum-section h3,
+.departments-section h3,
+.programs-section h3,
+.assessment-section h3,
+.support-section h3,
+.calendar-section h3 {
+    font-size: 2.5rem;
+    color: #1a2a4d;
+    margin-bottom: 0.5rem;
+}
+
+.academics-hero p,
+.curriculum-section p,
+.departments-section p,
+.programs-section p,
+.assessment-section p,
+.support-section p,
+.calendar-section p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Curriculum Section --- */
+.curriculum-pillars, .support-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pillar-card, .support-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.pillar-icon, .support-icon {
+    font-size: 2rem;
+    color: #1a2a4d;
+    margin-bottom: 1rem;
+}
+
+.pillar-card h4, .support-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pillar-card p, .support-card p {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* --- Departments Section --- */
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.department-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    text-align: left;
+}
+
+.department-card h4 {
+    font-size: 1.5rem;
+    color: #1a2a4d;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.department-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.department-card li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.department-card li svg {
+    color: #1a2a4d;
+}
+
+/* --- Programs Section --- */
+.programs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.program-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    flex: 1;
+    min-width: 350px;
+    text-align: left;
+}
+
+.program-card h4 {
+    font-size: 1.5rem;
+    color: #1a2a4d;
+    margin-bottom: 1rem;
+}
+
+.program-card h5 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.program-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Assessment Section --- */
+.assessment-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.assessment-details {
+    flex: 1;
+    min-width: 350px;
+    text-align: left;
+}
+
+.detail-item {
+    margin-bottom: 2rem;
+}
+
+.detail-item h4 {
+    font-size: 1.5rem;
+    color: #1a2a4d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.assessment-image-placeholder {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #666;
+    border-radius: 10px;
+}
+
+/* --- Calendar Section --- */
+.calendar-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.term-card {
+    background-color: #fff;
+    border-left: 5px solid #1a2a4d;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    text-align: left;
+    min-width: 250px;
+}
+
+.term-card h4 {
+    font-size: 1.2rem;
+    color: #1a2a4d;
+    margin-bottom: 0.5rem;
+}
+
+.term-card p {
+    color: #555;
+}
+
+.term-card span {
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .assessment-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .assessment-details {
+        text-align: center;
+        min-width: 100%;
+    }
+    .detail-item h4 {
+        justify-content: center;
+    }
+    .calendar-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .term-card {
+        width: 90%;
+    }
+}
+
+.assessment-image-placeholder {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden; /* This is crucial for containing the image and applying the border-radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.assessment-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image fill the container without distortion */
+    display: block; /* Removes extra spacing below the image */
+}

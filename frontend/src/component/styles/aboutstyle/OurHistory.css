@@ -1,0 +1,24 @@
+.history-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+.history-timeline {
+  flex: 1;
+  max-width: 500px;
+}
+
+.history-item {
+  margin-bottom: 20px;
+}
+
+.history-image-placeholder {
+  flex: 1;
+  height: 400px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

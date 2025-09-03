@@ -1,0 +1,284 @@
+/* General Layout and Typography */
+:root {
+  --primary-color: #0d9488; /* Teal */
+  --secondary-color: #ccfbf1; /* Light Teal */
+  --accent-color: #14b8a6; /* Strong Teal */
+  --text-color: #1f2937;
+  --bg-color: #f9fafb;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --error-color: #dc2626;
+  --success-color: #16a34a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+}
+
+.student-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.auth-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.nav-button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.portal-view {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Common Components and Utilities */
+.studentSection {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.sectionHeader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button.primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button.primary:hover {
+  background-color: var(--accent-color);
+}
+
+.button.secondary {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.button.secondary:hover {
+  background-color: var(--secondary-color);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.errorMessage {
+  background-color: #fee2e2;
+  color: var(--error-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--error-color);
+  margin-bottom: 1.5rem;
+}
+
+.successMessage {
+  background-color: #dcfce7;
+  color: var(--success-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--success-color);
+  margin-bottom: 1.5rem;
+}
+
+.loadingMessage {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.welcomeMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  color: #6b7280;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.dataTable th, .dataTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dataTable th {
+  background-color: var(--secondary-color);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.dataTable tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-pill.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.status-pill.successful {
+  background-color: #dcfce7;
+  color: #16a34a;
+}

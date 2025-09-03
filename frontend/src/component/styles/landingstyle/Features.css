@@ -1,0 +1,51 @@
+/* Container for the entire section */
+.features-section {
+  padding: 50px 0;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+/* Title of the section */
+.features-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Container for the individual feature cards */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between the cards */
+  margin-top: 40px;
+}
+
+/* Style for each individual card */
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px; /* Adjust as needed */
+  text-align: left;
+}
+
+.feature-card .icon {
+  font-size: 2.5em; /* Size of the icon */
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%; /* Adjust to fill the screen better */
+  }
+}

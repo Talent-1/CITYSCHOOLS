@@ -1,0 +1,42 @@
+/* src/components/Achievements.css */
+.achievements-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.achievements-section p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.achievements-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.achievement-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .achievements-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
