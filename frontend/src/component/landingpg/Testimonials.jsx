@@ -11,7 +11,7 @@ const Testimonials = () => {
     const fetchTestimonials = async () => {
       try {
         // Replace this with your actual API endpoint for testimonials
-        const response = await fetch('https://your-api.com/testimonials');
+        const response = await fetch('http://localhost:5000/testimonials');
         if (!response.ok) {
           throw new Error('Failed to fetch testimonials');
         }

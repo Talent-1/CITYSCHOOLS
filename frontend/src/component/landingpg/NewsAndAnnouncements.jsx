@@ -12,7 +12,7 @@ const NewsAndAnnouncements = () => {
     const fetchNews = async () => {
       try {
         // Use Axios to make the GET request
-        const response = await axios.get('https://your-api.com/news');
+        const response = await axios.get('http://localhost:5000/news');
         // Axios automatically parses JSON data
         setNewsItems(response.data);
       } catch (error) {

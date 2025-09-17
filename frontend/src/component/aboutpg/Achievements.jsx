@@ -11,7 +11,7 @@ const Achievements = () => {
     const fetchAchievements = async () => {
       try {
         // Replace this with your actual API endpoint for achievements
-        const response = await axios.get('https://your-api.com/achievements');
+        const response = await axios.get('http://localhost:5000/achievements');
         setAchievements(response.data);
       } catch (err) {
         setError(err);

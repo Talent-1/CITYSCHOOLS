@@ -11,7 +11,7 @@ const LeadershipTeam = () => {
     const fetchLeaders = async () => {
       try {
         // Replace this with your actual API endpoint for the leadership team
-        const response = await axios.get('https://your-api.com/leadership');
+        const response = await axios.get('http://localhost:5000/leadership');
         setLeaders(response.data);
       } catch (err) {
         setError(err);

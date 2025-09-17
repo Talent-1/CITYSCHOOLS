@@ -3,17 +3,8 @@ import { FaUser, FaLock, FaEnvelope, FaIdCard, FaBuilding, FaPhoneAlt, FaChalkbo
 import { Link } from 'react-router-dom';
 import '../component/styles/auth/AuthPage.css';
 
-// --- Simulated Database Data ---
-// In a real application, this data would be fetched from a backend API
-const campusData = ['Abor Ogidi Campus', 'Umuoji Campus', 'Adazi Ogidi Campus'];
-
-const sectionData = {
-    Basic: ['Pre-Nur', 'Nur-1', 'Nur-2', 'Nur-3', 'Pri 1', 'Pri-2', 'Pri-3', 'Pri-4', 'Pri-5', 'Pri-6'],
-    Junior: ['JSS1', 'JSS2', 'JSS3'],
-    Senior: ['SS1', 'SS2', 'SS3'],
-};
-
-const departmentData = ['Science', 'Arts', 'Commercial'];
+// --- Import Seed Data ---
+import { campusData, sectionData, departmentData } from '../data/schoolSeedData';
 
 const AuthPage = () => {
     // State to manage which view is active
@@ -101,7 +92,7 @@ const AuthPage = () => {
         // Add your API call for admin login here
     };
 
-    const handleStudentRegisterSubmit = (e) => {
+    const handleStudentRegisterSubmit = async (e) => {
         e.preventDefault();
         if (studentRegisterForm.password !== studentRegisterForm.confirmPassword) {
             displayMessage('Passwords do not match!', 'error');
@@ -111,9 +102,26 @@ const AuthPage = () => {
             displayMessage('You must agree to the Terms of Service and Privacy Policy.', 'error');
             return;
         }
-        console.log('Student Registration Data:', studentRegisterForm);
-        displayMessage('Student Registration attempt initiated. Check console for data.', 'success');
-        // Add your API call for student registration here
+
+        // Prepare data to send (remove confirmPassword and agreeToTerms)
+        const { confirmPassword, agreeToTerms, ...payload } = studentRegisterForm;
+
+        try {
+            const response = await fetch('http://localhost:5000/api/students/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+            const data = await response.json();
+            if (response.ok) {
+                displayMessage(`Registration successful! Your Student ID: ${data.studentId}`, 'success');
+                // Optionally, redirect or reset form here
+            } else {
+                displayMessage(data.error || 'Registration failed.', 'error');
+            }
+        } catch (error) {
+            displayMessage('Network error. Please try again.', 'error');
+        }
     };
 
     return (
@@ -231,9 +239,11 @@ const AuthPage = () => {
                                     >
                                         <option value="">Select access level</option>
                                         <option value="principal">Principal</option>
-                                        <option value="vice-principal">Exams Admin</option>
-                                        <option value="teacher">Teacher</option>
+                                        <option value="exam-officer">Exam Officer</option>
                                         <option value="bursar">Bursar</option>
+                                        <option value="campus-admin-ab">Campus Admin (Abor)</option>
+                                        <option value="campus-admin-ad">Campus Admin (Adazi)</option>
+                                        <option value="campus-admin-um">Campus Admin (Umuoji)</option>
                                     </select>
                                 </div>
                                 <div className="form-actions">

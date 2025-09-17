@@ -11,7 +11,7 @@ const CoreValues = () => {
     const fetchValues = async () => {
       try {
         // Replace this with your actual API endpoint for core values
-        const response = await axios.get('https://your-api.com/core-values');
+        const response = await axios.get('http://localhost:5000/core-values');
         setValues(response.data);
       } catch (err) {
         setError(err);

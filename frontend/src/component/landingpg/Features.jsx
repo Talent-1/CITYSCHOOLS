@@ -11,7 +11,7 @@ const Features = () => {
     const fetchFeatures = async () => {
       try {
         // Replace with your actual API endpoint for features
-        const response = await axios.get('https://your-api.com/features');
+        const response = await axios.get('http://localhost:5000/features');
         setFeatures(response.data);
       } catch (err) {
         setError(err);

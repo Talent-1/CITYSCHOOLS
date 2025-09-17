@@ -18,7 +18,7 @@ const ResultCheckerPage = () => {
       studentId: '1234/2025/201034',
       class: 'JSS III Science',
       date: 'January 31, 2025',
-      campus: 'adazi', // This is the dynamic part
+      campus: 'umuoji', // This is the dynamic part
       resultData: [
         { subject: 'Mathematics', ca: 40, exam: 45, total: 85, grade: 'A', remark: 'Passed', position: '1st' },
         { subject: 'English Language', ca: 32, exam: 40, total: 72, grade: 'B+', remark: 'Passed', position: '3rd' },

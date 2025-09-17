@@ -67,3 +67,13 @@ export const updateExam = async (examId, updatedData) => {
     throw error.response?.data?.message || 'Failed to update exam';
   }
 };
+
+// Create a new exam
+export const createExam = async (examData) => {
+  try {
+    const response = await apiClient.post('/exams', examData);
+    return response.data;
+  } catch (error) {
+    throw error.response?.data?.message || 'Failed to create exam';
+  }
+};

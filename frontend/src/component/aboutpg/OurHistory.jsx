@@ -11,7 +11,7 @@ const OurHistory = () => {
     const fetchHistory = async () => {
       try {
         // Replace this with your actual API endpoint for history events
-        const response = await axios.get('https://your-api.com/history');
+        const response = await axios.get('http://localhost:5000/history');
         setHistoryEvents(response.data);
       } catch (err) {
         setError(err);

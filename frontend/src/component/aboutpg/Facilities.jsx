@@ -11,7 +11,7 @@ const Facilities = () => {
     const fetchFacilities = async () => {
       try {
         // Replace this with your actual API endpoint for facilities
-        const response = await axios.get('https://your-api.com/facilities');
+        const response = await axios.get('http://localhost:5000/facilities');
         setFacilities(response.data);
       } catch (err) {
         setError(err);
